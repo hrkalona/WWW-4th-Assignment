@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    Version="2.4">
+    <servlet>
+        <servlet-name>Currency</servlet-name>
+        <servlet-class>CurrencyConverter2.CurrencyServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Currency</servlet-name>
+        <url-pattern>/SelectCurrency.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Information</servlet-name>
+        <servlet-class>CurrencyConverter2.InformationServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Information</servlet-name>
+        <url-pattern>/GetInfo.do</url-pattern>
+    </servlet-mapping>
+    
+    <context-param>
+        <param-name>redirectLink</param-name>
+        <param-value>https://hrkalona.wordpress.com/2011/11/11/www-4th-assignment</param-value>
+    </context-param>
+    
+    <listener>
+        <listener-class>CurrencyConverter2.InformationServletContextListener</listener-class>
+    </listener>
+    
+    <servlet>
+        <servlet-name>SourceCode</servlet-name>
+        <servlet-class>CurrencyConverter2.SourceCodeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SourceCode</servlet-name>
+        <url-pattern>/project.rar</url-pattern>
+    </servlet-mapping>
+ 
+</web-app>
